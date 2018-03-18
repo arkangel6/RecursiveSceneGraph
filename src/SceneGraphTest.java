@@ -54,6 +54,7 @@ public class SceneGraphTest {
 		
 		scene.update();
 		
+		System.out.println(o1c1.toString());
 		assertTrue(o1c1.isUpdated());
 		assertTrue(o1c2.isUpdated());
 		assertTrue(o1c3.isUpdated());
@@ -69,5 +70,9 @@ public class SceneGraphTest {
 		assertTrue(o4c3.isUpdated());
 		assertTrue(o4c4.isUpdated());
 		assertTrue(o5c1.isUpdated());
+		
+		
+		
+		
 	}
 }

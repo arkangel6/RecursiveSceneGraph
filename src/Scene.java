@@ -18,6 +18,23 @@ public class Scene {
 	 */
 	public void updateObject(int obj){
 		/* your code here */
+		/*for(int i = 0; i < obj; i++) {
+			sceneObjects.get(i).update();
+		}*/
+		/*if(obj == 0) {
+			sceneObjects.get(0).update();
+		}
+		else {
+			sceneObjects.get(obj).update();
+			this.updateObject(--obj);
+		
+		}*/
+		if(obj >= 0) {
+			update();
+			updateObject(obj-1);
+		}
+		
+		
 	}
 }
 
@@ -38,7 +55,22 @@ class Object {
 	 */
 	public void updateComponent(int com){
 		/* your code here */
-	}
+		/*if(com == 0) {
+			attachedComponents.get(0).update();
+		}
+		else {
+			attachedComponents.get(com).update();
+			this.updateComponent(--com);
+		
+		}*/
+		/*for(int i = 0; i < com; i++) {
+			attachedComponents.get(i).update();
+		}*/
+		if(com >= 0) {
+			update();
+			updateComponent(com-1);
+		}
+}
 }
 
 class Component {
@@ -73,6 +105,20 @@ class Component {
 	 */
 	public void updateSubComponent(int com){
 		/* your code here */
+		
+		/*if(com == 0) {
+			attachedComponents.get(0).update();
+		}
+		else {
+			attachedComponents.get(com).update();
+			this.updateSubComponent(--com);
+		}*/
+		
+		if(com >= 0) {
+			update();
+			updateSubComponent(com-1);
+		}
+		
 	}
 	
 	public boolean isUpdated(){
